@@ -15,24 +15,20 @@
                             <a href="#">Username</a>
                         </div>
                     </th>
+                    
                     <th>
                         <div class="text">
-                            <a href="#">Password</a>
+                            <a href="#"></a>
                         </div>
                     </th>
                     <th>
                         <div class="text">
-                            <a href="#">Firstname</a>
+                            <a href="#">Active</a>
                         </div>
                     </th>
                     <th>
                         <div class="text">
-                            <a href="#">Email</a>
-                        </div>
-                    </th>
-                    <th>
-                        <div class="text">
-                            <a href="#">Created_at</a>
+                            <a href="#">Activate/Deactivate</a>
                         </div>
                     </th>
                 </tr>
@@ -44,6 +40,12 @@
                     <td>{{user.username}}</td>
                     <td>{{user.date_joined}}</td>
                     <td>{{user.is_active}}</td>
+                    <td>
+                        
+                        {% if user.is_active %}
+                            <button type="submit" onSubmit="{}">Activate</button>
+                        {% endif %}
+                    </td>
                 </tr>
                 {% endfor %}
             </tbody>
