@@ -1,0 +1,13 @@
+{% extends "django_practical/base.html" %}
+
+{% block content %}
+    <ul>
+        {% for topic in topics %}
+            <li>
+                <a href="{% url 'django_practical:topic' topic.id %}" >{{ topic }}</li>
+        {% empty %}
+            <li>No topic to display</li>
+        {% endfor %}
+    </ul>
+
+{% endblock content %}
